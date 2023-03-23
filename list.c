@@ -67,7 +67,7 @@ void pushFront(List * list, void * data) {
   Node* nuevo =createNode(data);
   
   if(list -> head == NULL){
-    list -> tail = list->head = list->current = nuevo; 
+    
   }else{
     nuevo->next =  list->head;
     list->head = nuevo;
@@ -82,7 +82,19 @@ void pushBack(List * list, void * data) {
 void pushCurrent(List * list, void * data) {
   Node* nuevo =createNode(data);
 
-  nuevo->prev = list->current;
+  if(list->current==NULL){
+
+    list -> tail = list->head = list->current = nuevo; 
+    
+  }else{
+    
+    nuevo->prev = current;
+    nuevo->next = current->next;
+    if(list->current->next != NULL) list->current->next->prev = nuevo;
+    list->current->next = nuevo;
+
+  }
+  
   
 }
 
