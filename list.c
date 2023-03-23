@@ -109,7 +109,7 @@ void * popCurrent(List * list) {
 
   void* datito = list-> current->data;
 
-  if(list->current->prev == NULL && current->next == NULL){
+  if(list->current->prev == NULL && list->current->next == NULL){
     free(list->current);
     list -> tail = list->head = list->current = NULL;
   }else if(list->current->prev == NULL){
