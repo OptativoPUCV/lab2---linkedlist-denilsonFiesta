@@ -181,3 +181,15 @@ list.c:112:6: error: ‘current’ undeclared (first use in this function); did 
 list.c:112:6: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 77b4f46
+Thu 23 Mar 2023 04:20:25 PM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:112:6: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+  112 |   if(current->prev == NULL && current->next == NULL){
+      |      ^~~~~~~
+      |      popCurrent
+list.c:112:6: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+c37b301
