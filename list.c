@@ -40,8 +40,6 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-
-
   if(list->current==NULL) return NULL;
   
   list -> current = list->current->next;
@@ -51,13 +49,18 @@ void * nextList(List * list) {
 }
 
 void * lastList(List * list) {
-    return NULL;
+
+  list->current = list->tail;
+  if(list->tail == NULL) return NULL;
+  else return list->tail;
 }
 
 void * prevList(List * list) {
-    return NULL;
+  if(list->current == NULL) return NULL;
+  list -> current = list->current->prev;
+  if(list->current==NULL) return NULL;
+  else return list->current->data;
 }
-
 void pushFront(List * list, void * data) {
 }
 
