@@ -28,8 +28,9 @@ Node * createNode(void * data) {
     return new;
 }
 
-List * createList() {
-     return NULL;
+List* createList(){
+  List* nuevo = (List*) calloc(1, sizeof(List));
+  return nuevo;
 }
 
 void * firstList(List * list) {
