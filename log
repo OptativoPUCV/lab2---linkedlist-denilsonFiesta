@@ -93,3 +93,13 @@ Thu 23 Mar 2023 03:47:43 PM UTC:
  tests:  9|3
 total_score: 35/70
 36b6121
+Thu 23 Mar 2023 03:52:13 PM UTC: 
+ list.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:67:47: error: expected ‘,’ or ‘;’ before ‘l’
+   67 |   Node* nuevo = (Node*)calloc(1, sizeof(Node))l
+      |                                               ^
+Compilation failed
+cde4291
