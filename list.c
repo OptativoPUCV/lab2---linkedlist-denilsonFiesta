@@ -64,8 +64,7 @@ void * prevList(List * list) {
 
 void pushFront(List * list, void * data) {
 
-  Node* nuevo = (Node*)calloc(1, sizeof(Node));
-  nuevo->data = data;
+  Node* nuevo =createNode(data);
   
   if(list -> head == NULL){
     list -> tail = list->head = list->current = nuevo; 
